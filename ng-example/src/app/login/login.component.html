@@ -2,6 +2,10 @@
   
   <div class="col-3 ">
     <h1>Login</h1>
+    <div class="alert alert-danger" [hidden]="loginForm.valid"> 
+      <p [hidden]="loginForm.controls.username.valid || loginForm.controls.username.untouched">Username is required</p>
+      <p [hidden]="loginForm.controls.password.valid || loginForm.controls.password.untouched">Password is required</p>
+    </div>
     <form [formGroup]="loginForm"	(ngSubmit)="onSubmit(loginForm.value)">
       <div class="form-group">
         <label for="username">User</label>
@@ -11,7 +15,7 @@
         <label for="password">Password</label>
         <input type="password" class="form-control" id="password" name="password" formControlName="password">
       </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="submit" class="btn btn-primary" [disabled]="!loginForm.valid">Submit</button>
     </form>
   </div>
 </div>
