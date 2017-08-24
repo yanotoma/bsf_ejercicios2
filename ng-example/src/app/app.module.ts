@@ -17,6 +17,8 @@ import { BooksComponent } from './books/books.component';
 import { WeatherService } from './home/home.service'
 import { WeatherCardComponent } from './weather-card/weather-card.component';
 import { LoginComponent } from './login/login.component';
+import { BooksManagerComponent } from './books-manager/books-manager.component';
+import { BooksFiltersComponent } from './books-filters/books-filters.component';
 
 @NgModule({
   declarations: [
@@ -27,8 +29,10 @@ import { LoginComponent } from './login/login.component';
     HighlightDirective,
     ElipsisPipe,
     LoginComponent,
-    RouteComponent
-  ],
+    RouteComponent,
+    BooksManagerComponent,
+    BooksFiltersComponent
+],
   imports: [
     BrowserModule,
     HttpModule,

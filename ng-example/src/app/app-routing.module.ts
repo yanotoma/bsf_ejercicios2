@@ -1,3 +1,4 @@
+import { BooksManagerComponent } from './books-manager/books-manager.component';
 import { RouteComponent } from './shared/route.component';
 import { CanActivateAuthGuard } from './shared/can-activate.service';
 import { LoginComponent } from './login/login.component';
@@ -18,10 +19,10 @@ const routes: Routes = [
     {
         path: 'books',
         component: RouteComponent,
-        canActivate: [ CanActivateAuthGuard ],
-        canActivateChild: [ CanActivateAuthGuard ],
+        /* canActivate: [ CanActivateAuthGuard ],
+        canActivateChild: [ CanActivateAuthGuard ], */
         children: [
-            { path: '', component: BooksComponent}
+            { path: '', component: BooksManagerComponent}
         ]
     },
     {

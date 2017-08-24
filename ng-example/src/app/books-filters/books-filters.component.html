@@ -1,0 +1,5 @@
+<div class="col-lg-9">
+  <select name="sortBy" id="sortBy" [ngModel]="filters.sortBy" (ngModelChange)="onSelectSortBy($event)">
+    <option *ngFor="let filter of bookFilter.sortOptions" [value]="filter.value">{{filter.text}}</option>
+  </select>
+</div>
